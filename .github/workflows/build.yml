@@ -1,0 +1,18 @@
+# Name of the workflow
+name: build
+
+# when the workflow should run
+on: #trigger
+  push: #whenever code is pushed to github the workflow automatically runs 
+  workflow_call: #whenever this workflow to be called from another workflow
+  workflow_dispatch: #whenever you want the workflow to be called manually
+  schedule: #whenever you want the workflow to run at a specific time
+    - 
+# jobs in the workflow
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # steps in the workflow
+    steps:
+      - name: Build the code
+        run: echo "Code built using Docker"
